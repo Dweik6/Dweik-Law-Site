@@ -36,16 +36,35 @@ export default function Contact() {
             <div className="space-y-8">
               <div>
                 <h4 className="font-serif text-xl mb-4 border-b border-white/10 pb-2 inline-block">Chambers</h4>
-                <address className="not-italic text-secondary-foreground/70 space-y-1">
+                <address className="not-italic text-secondary-foreground/70 space-y-2">
                   <p>Amman</p>
                   <p>Hashemite Kingdom of Jordan</p>
+                  <a
+                    href="https://maps.app.goo.gl/RauW6F8Dw7Ge7iZj7?g_st=aw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm font-mono tracking-wide mt-2"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    View on Map
+                  </a>
                 </address>
+              </div>
+
+              <div>
+                <h4 className="font-serif text-xl mb-4 border-b border-white/10 pb-2 block">Telephone</h4>
+                <a
+                  href="tel:0796499980"
+                  className="block text-primary hover:text-primary/80 transition-colors font-mono tracking-widest text-lg"
+                >
+                  0796 499 980
+                </a>
               </div>
               
               <div>
                 <h4 className="font-serif text-xl mb-4 border-b border-white/10 pb-2 inline-block">Direct Protocol</h4>
                 <p className="text-secondary-foreground/70">
-                  By scheduled appointment only. 
+                  By scheduled appointment only.
                 </p>
               </div>
             </div>
