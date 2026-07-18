@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import attorneyPortrait from '@assets/attorney-portrait.jpg';
+import attorneyPortrait from '@assets/unnamed_1784346897122.webp';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
