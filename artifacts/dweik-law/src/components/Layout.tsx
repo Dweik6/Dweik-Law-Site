@@ -9,7 +9,7 @@ function NavLink({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Link 
       href={href} 
-      className={`text-sm tracking-[0.1em] uppercase transition-colors duration-500 pb-1 border-b ${
+      className={`text-xs md:text-sm tracking-[0.1em] uppercase transition-colors duration-500 pb-1 border-b whitespace-nowrap ${
         isActive 
           ? 'border-primary text-primary' 
           : 'border-transparent text-muted-foreground hover:text-foreground'
@@ -24,8 +24,8 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-[100dvh] flex flex-col selection:bg-primary selection:text-primary-foreground">
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/90 backdrop-blur-md">
-        <div className="container mx-auto px-6 h-24 flex items-center justify-between">
-          <Link href="/" className="flex flex-col">
+        <div className="container mx-auto px-4 md:px-6 py-4 md:py-0 md:h-24 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
+          <Link href="/" className="flex flex-col items-center md:items-start">
             <span className="font-serif text-2xl tracking-wide uppercase text-foreground leading-none">
               Dweik
             </span>
@@ -34,7 +34,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             </span>
           </Link>
           
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/legacy">The Legacy</NavLink>
             <NavLink href="/attorneys">Attorneys</NavLink>
