@@ -8,10 +8,25 @@ const fadeUp = {
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    try {
+      const res = await fetch('https://formspree.io/f/mkodrwrp', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -90,6 +105,7 @@ export default function Contact() {
                   <input 
                     type="text" 
                     id="name"
+                    name="name"
                     required
                     className="w-full bg-transparent border-b border-border py-3 px-0 text-secondary focus:outline-none focus:border-primary transition-colors rounded-none"
                     placeholder="Enter full legal name"
@@ -103,6 +119,7 @@ export default function Contact() {
                   <input 
                     type="text" 
                     id="contact"
+                    name="contact"
                     required
                     className="w-full bg-transparent border-b border-border py-3 px-0 text-secondary focus:outline-none focus:border-primary transition-colors rounded-none"
                     placeholder="Phone or Email"
@@ -115,6 +132,7 @@ export default function Contact() {
                   </label>
                   <select 
                     id="type"
+                    name="matter_type"
                     required
                     defaultValue=""
                     className="w-full bg-transparent border-b border-border py-3 px-0 text-secondary focus:outline-none focus:border-primary transition-colors rounded-none appearance-none"
@@ -134,6 +152,7 @@ export default function Contact() {
                   </label>
                   <textarea 
                     id="description"
+                    name="statement_of_facts"
                     required
                     rows={4}
                     className="w-full bg-transparent border-b border-border py-3 px-0 text-secondary focus:outline-none focus:border-primary transition-colors rounded-none resize-none"
@@ -143,9 +162,10 @@ export default function Contact() {
 
                 <button 
                   type="submit"
-                  className="w-full border border-secondary text-secondary py-4 text-xs font-mono uppercase tracking-widest hover:bg-secondary hover:text-white transition-colors duration-300 mt-4"
+                  disabled={loading}
+                  className="w-full border border-secondary text-secondary py-4 text-xs font-mono uppercase tracking-widest hover:bg-secondary hover:text-white transition-colors duration-300 mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Submit Petition
+                  {loading ? 'Transmitting...' : 'Submit Petition'}
                 </button>
               </form>
             )}
