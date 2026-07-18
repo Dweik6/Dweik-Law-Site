@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import founderPortrait from '@assets/unnamed_1784346930420.jpg';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -30,6 +31,38 @@ export default function Legacy() {
           </motion.div>
         </div>
       </header>
+
+      {/* Founder Portrait */}
+      <section className="py-20 border-b border-border">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="relative mx-auto md:mx-0 w-64">
+              <div className="aspect-[3/4] overflow-hidden border border-border">
+                <img
+                  src={founderPortrait}
+                  alt="Abdalmuti Al-Dweik — Founder"
+                  className="w-full h-full object-cover object-top grayscale contrast-110"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-full h-full border border-primary z-[-1]"></div>
+            </div>
+            <motion.div variants={fadeUp} className="space-y-6">
+              <div>
+                <p className="text-primary font-mono tracking-widest uppercase text-sm mb-2">The Founder</p>
+                <h2 className="text-3xl md:text-4xl font-serif text-secondary mb-1">Abdalmuti Al-Dweik</h2>
+                <p className="text-muted-foreground font-mono text-sm tracking-wide">1944 — 2023</p>
+              </div>
+              <div className="h-px w-12 bg-primary"></div>
+              <p className="text-muted-foreground leading-relaxed">
+                Born in Hebron in 1944, Abdalmuti Al-Dweik graduated in the distinguished class of 1967 and spent the following decades building one of the region's most formidable legal practices. His international work in the United Arab Emirates, followed by his defining contributions to the Jordanian bar, established an institutional legacy that no passage of time can diminish. He practiced with total dedication until his passing in 2023.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                The firm he built continues in his name and in his tradition.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       <section className="container mx-auto px-6 max-w-4xl mt-24">
         <div className="space-y-24">
