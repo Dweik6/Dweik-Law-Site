@@ -1,0 +1,16 @@
+A premium, highly structured website for "Dweik Law Firm," a prestigious, multi-generational law firm specializing in Criminal Law, high-stakes litigation, and appellate advocacy. The firm is built on an elite, historic legal lineage that spans decades of judicial and courtroom excellence across the region.
+
+Key Narrative & Backstory to Embed in the Site's Copy:
+- The Founder: Founded by a legendary legal figure born in Hebron in 1944. A graduate of the historic law school class of 1967, he established his foundational expertise working in the UAE before bringing his distinguished practice back to Jordan, dedicating his life to the law until his passing in 2023.
+- The Leadership: Led by CEO Ata Al-Dweik, a powerhouse legal mind. A practicing attorney starting in 1993, he transitioned to the judiciary in 2001, serving with distinction for over two decades. He concluded his judicial career as a prominent Judge in the Court of Appeal in 2023, retiring from the bench to return to private practice and lead the firm.
+
+Key Pages & Structure:
+1. Home Page: A commanding hero section introducing "Dweik Law Firm." Emphasizes absolute authority, institutional knowledge, and deep courtroom experience. Includes distinct blocks for the Firm’s History, Core Practice Areas (Criminal Law, Crimes Against Property, Appellate Advocacy), and a profile of judicial excellence.
+2. The Legacy (About Page): A deeply narrative page tracking the firm's timeline from the founder's 1967 graduation, the international experience in the UAE, to the firm's deep roots in Jordan. It highlights the transition from decades on the judicial bench (Court of Appeal) back to elite defense work.
+3. Attorney Profiles: Dedicated sections highlighting CEO Ata Al-Dweik's transition from an influential appellate judge to senior private counsel, emphasizing a unique perspective from both sides of the bench.
+4. Practice Areas: Structured breakdown focusing on Criminal Defense, Strategic Appellate Litigation, Property Crimes, and Complex Civil Disputes.
+5. Contact: A formal, minimalist consultation request portal.
+
+Visual Tone & Layout:
+- Rigid, symmetrical grid layouts that reflect order, discipline, and unwavering stability.
+- Deeply authoritative, elite, and classic visual sections separated by clean lines. The generated copy must be sophisticated, articulate, and definitive.

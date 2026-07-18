@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Dweik Law Firm"
+version = "1.0.0"
+id = "artifacts/dweik-law"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24501
+
+[services.development]
+run = "pnpm --filter @workspace/dweik-law run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dweik-law", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/dweik-law/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24501"
+BASE_PATH = "/"
